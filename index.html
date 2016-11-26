@@ -1,35 +1,31 @@
-<!--.....................................................
-Please read the comments in the tutorial code for information about the parts of a scene, and how to use them. You can edit this code and see the results in the live-editor. To start over, hit the "Reset Code" button.  Happy hacking!
-.........................................................-->
-
 <!DOCTYPE html>
 <!--The head tag encloses links to any scripts you are using, scene title, and metadata such as favicon-->
    <head>
     <meta charset="utf-8">
-    <script>navigator.serviceWorker.register('../sw.js');</script>
-     <title>Basic Boilerplate!</title>
-    <script src="../js/vendor/aframe.min.js"></script>
+     <title>EJL Portfolio</title>
+    <script src="../js/aframe.min.js"></script>
     <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
    </head>
   <body>
     <a-scene>
-    <a-assets>
-    <a-asset-item id="item-id" src="../path/to/item/filename.obj"></a-asset-item>
-    </a-assets>
+    	<a-assets>
+    		<a-asset-item id="galleries" src="../models/galleries4.dae"></a-asset-item>
+    	</a-assets>
 
     <a-sky color="#AAA"></a-sky>
 
     <a-camera position="0 0 0"></a-camera>
 
 <!--LIGHTS-->
-    <a-entity light="color: #ECABFF; intensity: 1.1" position="0 -5 -5" type="point"></a-entity>
-    <a-entity light="color: white; intensity: 2" position="0 10 3" type="ambient"></a-entity>
 
-<!--GROUND PLANE-->
-    <a-plane height="20" width="20" rotation="-90, 0, 0" color="#5D8C60" position="0, 0, 0"></a-plane>
+<a-entity id="dome-light" light="type: point; color: #FFF; intensity: 0.2" position="0 1 -5"></a-entity>
+<a-light id="gallery-light" type="directional" intensity="0.5" position="0 1 -14" rotation="90 0 0">
+</a-light>
+<a-light id="atrium-light" type="point" intensity="0.5" position="0 1 -55">
+</a-light>
 
 <!--MODELS-->
-      <a-obj-model src="#item-id" position="3, 0, 5"></a-obj-model>
+      <a-collada-model src="#galleries" scale="2 2 2" position="0 0 0"></a-collada-model>
     </a-scene>
   </body>
 </html>
