@@ -4,28 +4,189 @@
     <meta charset="utf-8">
      <title>EJL Portfolio</title>
     <script src="../js/aframe.min.js"></script>
+    <script src="../js/aframe-bmfont-text-component.min.js"></script>
+    <script src="../js/aframe-look-at-component.min.js"></script>
     <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
    </head>
   <body>
     <a-scene>
-    	<a-assets>
-    		<a-asset-item id="galleries" src="../models/galleries4.dae"></a-asset-item>
-    	</a-assets>
+
+<!--..................
+ASEETS
+...................-->
+    <a-assets>
+    	<a-asset-item id="galleries" src="../models/galleries6.dae"></a-asset-item>
+    	<a-asset-item id="minersLettuce" src="../models/minersLettuce1.dae"></a-asset-item>
+    	<video id="steriographi-video" autoplay loop="true" src="../videos/steriographi-interactive.mp4">
+    	<img id="manual-watering" src="../img/manual-watering.png">
+    	<img id="watering-schedule" src="../img/watering-schedule.png">
+
+    	<img id="turqnoise" src="../img/turqnoise.png">
+    </a-assets>
 
     <a-sky color="#AAA"></a-sky>
 
-    <a-camera position="0 0 0"></a-camera>
+    <a-entity id="camera-mover" position="0 0 -1">
+    <a-camera></a-camera>
+    </a-entity>
 
-<!--LIGHTS-->
+<!--.............
+LIGHTS
+..............-->
 
-<a-entity id="dome-light" light="type: point; color: #FFF; intensity: 0.2" position="0 1 -5"></a-entity>
-<a-light id="gallery-light" type="directional" intensity="0.5" position="0 1 -14" rotation="90 0 0">
+<a-light id="dome-light" type="point" intensity="0.5" position="0 3 -5"></a-light>
+<a-light id="gallery-light" type="point" intensity="0.5" position="0 3 -14"></a-light>
+<a-light id="atrium-light" type="point" intensity="0.5" position="0 3s -50">
 </a-light>
-<a-light id="atrium-light" type="point" intensity="0.5" position="0 1 -55">
-</a-light>
 
-<!--MODELS-->
-      <a-collada-model src="#galleries" scale="2 2 2" position="0 0 0"></a-collada-model>
+<!--GALLERIES-->
+     <a-collada-model id="gallery-mesh" src="#galleries" scale="2 2 2" position="0 0 0"></a-collada-model>
+
+<!--WATER-->
+	<a-plane color="#20A3CF" height="100" width="100" rotation="-90 0 0" position="0 -0.6 0"></a-plane>
+
+<!--...................................
+
+ART
+
+...................................-->
+<a-entity bmfont-text="text: Time to think beyond these ideas of scale and context.; align: center; color: #ffffff; width: 320;" position="-0.4 1 -16" scale="0.5 0.5 0.5" rotation="-80 0 0"></a-entity>
+
+<a-entity class="rotate-art" position="0 0 -5" rotation="0 -60 0">
+	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
+	 <a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	    </a-entity>
+</a-entity>
+
+
+<!--...................................
+
+2D UI Designs
+
+...................................-->
+<a-entity bmfont-text="text: Time to think beyond these ideas of scale and context.; align: center; color: #ffffff; width: 320;" position="-0.4 1 -16" scale="0.5 0.5 0.5" rotation="-80 0 0"></a-entity>
+
+<a-entity class="rotate-exhibit" position="0 0 -15" rotation="0 -60 0">
+	<a-video src="#steriographi-video" width="1" height="2" position="0 2 -3"></a-video>
+	 <a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	    </a-entity>
+</a-entity>
+
+<a-entity class="rotate-exhibit" position="0 0 -15" rotation="0 60 0">
+	<a-video src="#steriographi-video" width="1" height="2" position="0 2 -3"></a-video>
+	<a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	    </a-entity>
+</a-entity>
+
+<a-entity class="rotate-exhibit" position="0 0 -15" rotation="0 -90 0">
+	<a-video src="#steriographi-video" width="1" height="2" position="0 2 -3"></a-video>
+	<a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	    </a-entity>
+</a-entity>
+
+<a-entity class="rotate-exhibit" position="0 0 -15" rotation="0 90 0">
+	<a-video src="#steriographi-video" width="1" height="2" position="0 2 -3"></a-video>
+	<a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	    </a-entity>
+</a-entity>
+
+<!--.........................-->
+
+<a-entity class="rotate-exhibit" position="0 0 -13" rotation="0 90 0">
+	<a-image src="#manual-watering" width="1" height="2" position="0 2 -3"></a-image>
+	<a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	    </a-entity>
+</a-entity>
+<a-entity class="rotate-exhibit" position="0 0 -11" rotation="0 90 0">
+	<a-image src="#manual-watering" width="1" height="2" position="0 2 -3"></a-image>
+	<a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	    </a-entity>
+</a-entity>
+
+<a-entity class="rotate-exhibit" position="0 0 -13" rotation="0 -90 0">
+	<a-image src="#manual-watering" width="1" height="2" position="0 2 -3"></a-image>
+	<a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	    </a-entity>
+</a-entity>
+<a-entity class="rotate-exhibit" position="0 0 -11" rotation="0 -90 0">
+	<a-image src="#manual-watering" width="1" height="2" position="0 2 -3"></a-image>
+	<a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	    </a-entity>
+</a-entity>
+
+
+<!--...................................
+
+MODELS + PEDESTALS
+
+...................................-->
+
+<!--MODEL-->
+<a-entity class="left-pedestal" position="-2 0 -24">		
+	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
+	    </a-entity>
+	<a-entity class="pedestal"> 
+		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+		<a-box scale="1 2 1" position="0 0 0"></a-box>
+    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+	</a-entity>
+</a-entity>
+
+<!--MODEL-->
+<a-entity class="right-pedestal" position="2 0 -26">		
+	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
+	    </a-entity>
+	<a-entity class="pedestal"> 
+		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+		<a-box scale="1 2 1" position="0 0 0"></a-box>
+    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+	</a-entity>
+</a-entity>
+
+<!--MODEL-->
+<a-entity class="left-pedestal" position="-2 0 -28">		
+	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
+	    </a-entity>
+	<a-entity class="pedestal"> 
+		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+		<a-box scale="1 2 1" position="0 0 0"></a-box>
+    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+	</a-entity>
+</a-entity>
+
+<!--MODEL-->
+<a-entity class="right-pedestal" position="2 0 -30">		
+	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
+	    </a-entity>
+	<a-entity class="pedestal"> 
+		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+		<a-box scale="1 2 1" position="0 0 0"></a-box>
+    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+	</a-entity>
+</a-entity>
+
+<!--MODEL-->
+<a-entity class="left-pedestal" position="-2 0 -32">		
+	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
+	    </a-entity>
+	<a-entity class="pedestal"> 
+		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+		<a-box scale="1 2 1" position="0 0 0"></a-box>
+    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+	</a-entity>
+</a-entity>
+
+<!--MODEL-->
+<a-entity class="right-pedestal" position="2 0 -34">		
+	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
+	    </a-entity>
+	<a-entity class="pedestal"> 
+		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+		<a-box scale="1 2 1" position="0 0 0"></a-box>
+    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+	</a-entity>
+</a-entity>
+
     </a-scene>
   </body>
 </html>
