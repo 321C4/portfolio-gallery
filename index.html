@@ -12,7 +12,7 @@
     <a-scene>
 
 <!--..................
-ASEETS
+ASSETS
 ...................-->
     <a-assets>
     	<!--galleries-->
@@ -51,13 +51,15 @@ ASEETS
 <!--SKY & CAMERA-->    
   	<a-sky color="#425D70"></a-sky>
 
-    <a-entity id="camera-mover" position="0 0 -2">
+    <a-entity id="camera-mover" position="0 0 -53">
     <a-camera></a-camera>
     </a-entity>
 <!--LIGHTS-->
-<a-light id="dome-light" type="point" intensity="0.5" position="0 0 -4"></a-light>
-<a-light id="atrium-light" type="point" intensity="0.5" position="0 3 -50">
-</a-light>
+<a-entity light="type: point; intensity: 1.5; distance: 35; decay: 2" position="0 15 -3"></a-entity>
+<a-entity light="type: point; intensity: 0.75; distance: 15; decay: 2" position="0 0 -14"></a-entity>
+<a-entity light="type: point; intensity: 2; distance: 15; decay: 2" position="0 5 -54"></a-entity>
+<!--<a-entity light="type: ambient; color: #CCC; intensity: 0.1"></a-entity>-->
+
 <!--WATER-->
 <a-plane color="#20A3CF" height="100" width="100" rotation="-90 0 0" position="0 -0.6 0"></a-plane>
 <!--GALLERIES MODEL-->
@@ -69,43 +71,43 @@ IMAGES OF ART PIECES
 <!--image of art piece 1-->
 <a-entity class="rotate-art" position="0 0 -3.5" rotation="0 -30 0">
 	<a-image src="#art-1" width="1" height="1" position="0 1.5 -4"></a-image>
-	<a-entity bmfont-text="text: Soft VHS Plants vacuformed plastic, VHS tape  2007; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
+	<a-entity bmfont-text="text: Soft VHS Plants vaccuformed plastic, VHS tape,  2007; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
 <!--image of art piece 2-->
 </a-entity>
 <a-entity class="rotate-art" position="0 0 -3.5" rotation="0 -60 0">
 	<a-image src="#art-2" width="1" height="1" position="0 1.5 -4"></a-image>
-	<a-entity bmfont-text="text: Plant Pants fabric, soil, living plant 2007; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
+	<a-entity bmfont-text="text: Plant Pants fabric, soil, living plant, 2007; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
 <!--image of art piece 3-->
 </a-entity>
 <a-entity class="rotate-art" position="0 0 -3.5" rotation="0 -90 0">
 	<a-image src="#art-3" width="1" height="1" position="0 1.5 -4"></a-image>
-	<a-entity bmfont-text="text: Reading Glasses paper, glue 2007; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
+	<a-entity bmfont-text="text: Reading Glasses paper, glue, 2007; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
 <!--image of art piece 4-->
 </a-entity>
 <a-entity class="rotate-art" position="0 0 -3.5" rotation="0 -120 0">
 	<a-image src="#art-4" width="1" height="1" position="0 1.5 -4"></a-image>
-	<a-entity bmfont-text="text: Automannequin mixed media 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
+	<a-entity bmfont-text="text: Automannequin mixed media, 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
 <!--image of art piece 5-->
 </a-entity>
 <a-entity class="rotate-art" position="0 0 -3.5" rotation="0 -150 0">
 	<a-image src="#art-5" width="1" height="1" position="0 1.5 -4"></a-image>
-	<a-entity bmfont-text="text: Bag Hands paper, thread 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
+	<a-entity bmfont-text="text: Bag Hands paper, thread, 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
 <!--image of art piece 6-->
 </a-entity>
 <a-entity class="rotate-art" position="0 0 -3.5" rotation="0 180 0">
 	<a-image src="#art-6" width="1" height="1" position="0 1.5 -4"></a-image>
-	<a-entity bmfont-text="text: People and Spider mixed media 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
+	<a-entity bmfont-text="text: People and Spider mixed media, 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
 <!--image of art piece 7-->
 </a-entity>
 <a-entity class="rotate-art" position="0 0 -3.5" rotation="0 150 0">
 	<a-image src="#art-7" width="1" height="1" position="0 1.5 -4"></a-image>
-	<a-entity bmfont-text="text: Techno Idol plastic, glass, living plants 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
+	<a-entity bmfont-text="text: Techno Idol plastic, glass, living plants, 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
 <!--image of art piece 8-->
 </a-entity>
@@ -135,8 +137,8 @@ IMAGES OF ART PIECES
 <!--...................................
 2D UI Designs
 ...................................-->
-
-<a-entity bmfont-text="text: Time to think beyond these ideas of scale and context.; align: center; color: #ffffff; width: 320;" position="-0.4 1 -16" scale="0.5 0.5 0.5" rotation="-80 0 0"></a-entity>
+<a-entity bmfont-text="text: Just as I began learning about 2D UI design..; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -11" scale="0.5 0.5 0.5" rotation="-90 0 0"></a-entity>
+<a-entity bmfont-text="text: It became necessary to think beyond these ideas of scale and context; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -16" scale="0.5 0.5 0.5" rotation="-80 0 0"></a-entity>
 <!--Steriographi video right-->
 <a-entity class="rotate-exhibit" position="0 0 -15" rotation="0 -60 0">
 	<a-video src="#steriographi-video" width="1.2" height="2" position="0 2 -3"></a-video>
@@ -182,17 +184,17 @@ MODELS on PEDESTALS
 	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-
+	<a-entity light="type: spot; angle: 180; intensity: 2.5; distance: 5; decay: 2" position="0 3 0"></a-entity>
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
     	<a-collada-model src="#model-1" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
 	</a-entity>
 </a-entity>
 <!--MODEL 2-->
 <a-entity class="right-pedestal" position="2 0 -26">		
-	    <a-entity bmfont-text="text: Globe Trees Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-90 -90 0" scale="0.5 0.5 0.5">
+	    <a-entity bmfont-text="text: Globe Trees Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-
+	<a-entity light="type: spot; angle: 180; intensity: 2.5; distance: 5; decay: 2" position="0 3 0"></a-entity>
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
     	<a-collada-model src="#model-2" scale="0.02 0.02 0.02" position="0 1.05 0"></a-collada-model>
 	</a-entity>
@@ -202,7 +204,7 @@ MODELS on PEDESTALS
 	    <a-entity bmfont-text="text: Office Islands Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-
+	<a-entity light="type: spot; angle: 180; intensity: 2.5; distance: 5; decay: 2" position="0 3 0"></a-entity>
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
     	<a-collada-model src="#model-3" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
 	</a-entity>
@@ -212,7 +214,7 @@ MODELS on PEDESTALS
 	    <a-entity bmfont-text="text: Giant Sequoia Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-
+	<a-entity light="type: spot; angle: 180; intensity: 2.5; distance: 5; decay: 2" position="0 3 0"></a-entity>
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
     	<a-collada-model src="#model-4" scale="0.1 0.1 0.1" position="-0.5 1 0"></a-collada-model>
 	</a-entity>
@@ -222,7 +224,7 @@ MODELS on PEDESTALS
 	    <a-entity bmfont-text="text: Floating Island Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-
+	<a-entity light="type: spot; angle: 180; intensity: 2.5; distance: 5; decay: 2" position="0 3 0"></a-entity>
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
     	<a-collada-model src="#model-5" scale="0.03 0.03 0.03" position="0 1.06 0"></a-collada-model>
 	</a-entity>
@@ -232,7 +234,7 @@ MODELS on PEDESTALS
 	    <a-entity bmfont-text="text: Watchful Islands Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-
+	<a-entity light="type: spot; angle: 180; intensity: 2.5; distance: 5; decay: 2" position="0 3 0"></a-entity>
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
     	<a-collada-model src="#model-6" scale="0.08 0.08 0.08" position="0 1.3 0"></a-collada-model>
 	</a-entity>
@@ -241,6 +243,58 @@ MODELS on PEDESTALS
 <!--...................................
 VR STUFF!!! videos, GIs, and portals to webVR scenes
 ...................................-->
+<a-entity bmfont-text="text: My journey into VR is just beginning.; align: center; color: #ffffff; width: 320;" position="-0.4 0.4 -44" scale="0.5 0.5 0.5" rotation="-60 0 0"></a-entity>
+
+<!--0 GLOBETREES-->
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 0 0">
+	<a-entity bmfont-text="Link: Carnival Globe Trees WebVR, 2016; align: center; color: #ffffff; width: 320;" position="0.4 3 -6" rotation="0 90 0" scale="0.5 0.5 0.5">
+	</a-entity>
+	<a-entity geometry="primitive: box; width: 1; height: 2; depth: 0.2" color="#ccc" position="0 1 -6"></a-entity>
+</a-entity>
+
+<!--36 DEMO 1 VIDEO-->
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 36 0">
+	<a-entity geometry="primitive: box; width: 1; height: 2; depth: 0.2" color="#ccc" position="0 1 -6"></a-entity>
+</a-entity>
+
+<!--72 SAD ISLAND-->
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 72 0">
+	<a-entity geometry="primitive: box; width: 1; height: 2; depth: 0.2" color="#ccc" position="0 1 -6"></a-entity>
+</a-entity>
+
+<!--108 OVER WATER-->
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 108 0">
+	<a-entity geometry="primitive: box; width: 1; height: 2; depth: 0.2" color="#ccc" position="0 1 -6"></a-entity>
+</a-entity>
+
+<!--144 DARK LOTUS-->
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 144 0">
+	<a-entity geometry="primitive: box; width: 1; height: 2; depth: 0.2" color="#ccc" position="0 1 -6"></a-entity>
+</a-entity>
+
+<!-- -144 MOSS MARCH-->
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -144 0">
+	<a-entity geometry="primitive: box; width: 1; height: 2; depth: 0.2" color="#ccc" position="0 1 -6"></a-entity>
+</a-entity>
+
+<!-- - 108 SPACE BLOB TOWERS-->
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -108 0">
+	<a-entity geometry="primitive: box; width: 1; height: 2; depth: 0.2" color="#ccc" position="0 1 -6"></a-entity>
+</a-entity>
+
+<!-- -72 REDWOOD DUSK-->
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -72 0">
+	<a-entity geometry="primitive: box; width: 1; height: 2; depth: 0.2" color="#ccc" position="0 1 -6"></a-entity>
+</a-entity>
+
+<!-- -36 DEMO 2 VIDEO-->
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -36 0">
+	<a-entity geometry="primitive: box; width: 1; height: 2; depth: 0.2" color="#ccc" position="0 1 -6"></a-entity>
+</a-entity>
+
+
+
+
 
     </a-scene>
   </body>
