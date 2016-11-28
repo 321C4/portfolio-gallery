@@ -10,209 +10,6 @@
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
-  <library_lights>
-    <light id="Lamp_001-light" name="Lamp.001">
-      <technique_common>
-        <point>
-          <color sid="color">1 0.8991456 0.8443691</color>
-          <constant_attenuation>1</constant_attenuation>
-          <linear_attenuation>0</linear_attenuation>
-          <quadratic_attenuation>0.00111109</quadratic_attenuation>
-        </point>
-      </technique_common>
-      <extra>
-        <technique profile="blender">
-          <adapt_thresh>0.000999987</adapt_thresh>
-          <area_shape>1</area_shape>
-          <area_size>0.1</area_size>
-          <area_sizey>0.1</area_sizey>
-          <area_sizez>1</area_sizez>
-          <atm_distance_factor>1</atm_distance_factor>
-          <atm_extinction_factor>1</atm_extinction_factor>
-          <atm_turbidity>2</atm_turbidity>
-          <att1>0</att1>
-          <att2>1</att2>
-          <backscattered_light>1</backscattered_light>
-          <bias>1</bias>
-          <blue>0.8443691</blue>
-          <buffers>1</buffers>
-          <bufflag>0</bufflag>
-          <bufsize>2880</bufsize>
-          <buftype>2</buftype>
-          <clipend>30.002</clipend>
-          <clipsta>1.000799</clipsta>
-          <compressthresh>0.04999995</compressthresh>
-          <dist sid="blender_dist">29.99998</dist>
-          <energy sid="blender_energy">1</energy>
-          <falloff_type>2</falloff_type>
-          <filtertype>0</filtertype>
-          <flag>0</flag>
-          <gamma sid="blender_gamma">1</gamma>
-          <green>0.8991456</green>
-          <halo_intensity sid="blnder_halo_intensity">1</halo_intensity>
-          <horizon_brightness>1</horizon_brightness>
-          <mode>8192</mode>
-          <ray_samp>1</ray_samp>
-          <ray_samp_method>1</ray_samp_method>
-          <ray_samp_type>0</ray_samp_type>
-          <ray_sampy>1</ray_sampy>
-          <ray_sampz>1</ray_sampz>
-          <red>1</red>
-          <samp>3</samp>
-          <shadhalostep>0</shadhalostep>
-          <shadow_b sid="blender_shadow_b">0</shadow_b>
-          <shadow_g sid="blender_shadow_g">0</shadow_g>
-          <shadow_r sid="blender_shadow_r">0</shadow_r>
-          <sky_colorspace>0</sky_colorspace>
-          <sky_exposure>1</sky_exposure>
-          <skyblendfac>1</skyblendfac>
-          <skyblendtype>1</skyblendtype>
-          <soft>3</soft>
-          <spotblend>0.15</spotblend>
-          <spotsize>75</spotsize>
-          <spread>1</spread>
-          <sun_brightness>1</sun_brightness>
-          <sun_effect_type>0</sun_effect_type>
-          <sun_intensity>1</sun_intensity>
-          <sun_size>1</sun_size>
-          <type>0</type>
-        </technique>
-      </extra>
-    </light>
-    <light id="Lamp-light" name="Lamp">
-      <technique_common>
-        <point>
-          <color sid="color">1 0.9306391 0.6728579</color>
-          <constant_attenuation>1</constant_attenuation>
-          <linear_attenuation>0</linear_attenuation>
-          <quadratic_attenuation>0.00111109</quadratic_attenuation>
-        </point>
-      </technique_common>
-      <extra>
-        <technique profile="blender">
-          <adapt_thresh>0.000999987</adapt_thresh>
-          <area_shape>1</area_shape>
-          <area_size>0.1</area_size>
-          <area_sizey>0.1</area_sizey>
-          <area_sizez>1</area_sizez>
-          <atm_distance_factor>1</atm_distance_factor>
-          <atm_extinction_factor>1</atm_extinction_factor>
-          <atm_turbidity>2</atm_turbidity>
-          <att1>0</att1>
-          <att2>1</att2>
-          <backscattered_light>1</backscattered_light>
-          <bias>1</bias>
-          <blue>0.6728579</blue>
-          <buffers>1</buffers>
-          <bufflag>0</bufflag>
-          <bufsize>2880</bufsize>
-          <buftype>2</buftype>
-          <clipend>30.002</clipend>
-          <clipsta>1.000799</clipsta>
-          <compressthresh>0.04999995</compressthresh>
-          <dist sid="blender_dist">29.99998</dist>
-          <energy sid="blender_energy">1</energy>
-          <falloff_type>2</falloff_type>
-          <filtertype>0</filtertype>
-          <flag>0</flag>
-          <gamma sid="blender_gamma">1</gamma>
-          <green>0.9306392</green>
-          <halo_intensity sid="blnder_halo_intensity">1</halo_intensity>
-          <horizon_brightness>1</horizon_brightness>
-          <mode>8192</mode>
-          <ray_samp>1</ray_samp>
-          <ray_samp_method>1</ray_samp_method>
-          <ray_samp_type>0</ray_samp_type>
-          <ray_sampy>1</ray_sampy>
-          <ray_sampz>1</ray_sampz>
-          <red>1</red>
-          <samp>3</samp>
-          <shadhalostep>0</shadhalostep>
-          <shadow_b sid="blender_shadow_b">0</shadow_b>
-          <shadow_g sid="blender_shadow_g">0</shadow_g>
-          <shadow_r sid="blender_shadow_r">0</shadow_r>
-          <sky_colorspace>0</sky_colorspace>
-          <sky_exposure>1</sky_exposure>
-          <skyblendfac>1</skyblendfac>
-          <skyblendtype>1</skyblendtype>
-          <soft>3</soft>
-          <spotblend>0.15</spotblend>
-          <spotsize>75</spotsize>
-          <spread>1</spread>
-          <sun_brightness>1</sun_brightness>
-          <sun_effect_type>0</sun_effect_type>
-          <sun_intensity>1</sun_intensity>
-          <sun_size>1</sun_size>
-          <type>0</type>
-        </technique>
-      </extra>
-    </light>
-    <light id="Sun-light" name="Sun">
-      <technique_common>
-        <directional>
-          <color sid="color">0.2736226 0.9712751 1</color>
-        </directional>
-      </technique_common>
-      <extra>
-        <technique profile="blender">
-          <adapt_thresh>0.000999987</adapt_thresh>
-          <area_shape>0</area_shape>
-          <area_size>0.1</area_size>
-          <area_sizey>0.1</area_sizey>
-          <area_sizez>0.1</area_sizez>
-          <atm_distance_factor>1</atm_distance_factor>
-          <atm_extinction_factor>1</atm_extinction_factor>
-          <atm_turbidity>2</atm_turbidity>
-          <att1>0</att1>
-          <att2>1</att2>
-          <backscattered_light>1</backscattered_light>
-          <bias>1</bias>
-          <blue>1</blue>
-          <buffers>1</buffers>
-          <bufflag>0</bufflag>
-          <bufsize>512</bufsize>
-          <buftype>2</buftype>
-          <clipend>40</clipend>
-          <clipsta>0.5</clipsta>
-          <compressthresh>0.04999995</compressthresh>
-          <dist sid="blender_dist">25</dist>
-          <energy sid="blender_energy">1</energy>
-          <falloff_type>2</falloff_type>
-          <filtertype>0</filtertype>
-          <flag>0</flag>
-          <gamma sid="blender_gamma">1</gamma>
-          <green>0.9712751</green>
-          <halo_intensity sid="blnder_halo_intensity">1</halo_intensity>
-          <horizon_brightness>1</horizon_brightness>
-          <mode>1</mode>
-          <ray_samp>1</ray_samp>
-          <ray_samp_method>1</ray_samp_method>
-          <ray_samp_type>0</ray_samp_type>
-          <ray_sampy>1</ray_sampy>
-          <ray_sampz>1</ray_sampz>
-          <red>0.2736226</red>
-          <samp>3</samp>
-          <shadhalostep>0</shadhalostep>
-          <shadow_b sid="blender_shadow_b">0</shadow_b>
-          <shadow_g sid="blender_shadow_g">0</shadow_g>
-          <shadow_r sid="blender_shadow_r">0</shadow_r>
-          <sky_colorspace>2</sky_colorspace>
-          <sky_exposure>1</sky_exposure>
-          <skyblendfac>1</skyblendfac>
-          <skyblendtype>1</skyblendtype>
-          <soft>3</soft>
-          <spotblend>0.15</spotblend>
-          <spotsize>45</spotsize>
-          <spread>1</spread>
-          <sun_brightness>1</sun_brightness>
-          <sun_effect_type>0</sun_effect_type>
-          <sun_intensity>1</sun_intensity>
-          <sun_size>1</sun_size>
-          <type>1</type>
-        </technique>
-      </extra>
-    </light>
-  </library_lights>
   <library_images/>
   <library_effects>
     <effect id="furnituredark-effect">
@@ -1070,7 +867,6 @@
       </node>
       <node id="Lamp_001" name="Lamp_001" type="NODE">
         <matrix sid="transform">-0.6408749 -1.699001 1.247959 1.080495 2.104571 -0.4404119 0.4811907 0.0339941 -0.1216005 1.331976 1.750936 4.075467 0 0 0 1</matrix>
-        <instance_light url="#Lamp_001-light"/>
       </node>
       <node id="Cylinder_008" name="Cylinder_008" type="NODE">
         <matrix sid="transform">2.641746 -1.104391 0 0.02005529 1.104391 2.641746 0 1.386663 0 0 2.863302 1.324623 0 0 0 1</matrix>
@@ -1083,7 +879,6 @@
         </instance_geometry>
         <node id="Lamp" name="Lamp" type="NODE">
           <matrix sid="transform">-0.2448678 -0.6491604 0.4768248 6.87703e-4 0.8041221 -0.1682742 0.1838552 -0.07660809 -0.04646158 0.5089263 0.6690042 0.1105947 0 0 0 1</matrix>
-          <instance_light url="#Lamp-light"/>
         </node>
       </node>
       <node id="Cube_003" name="Cube_003" type="NODE">
@@ -1138,7 +933,6 @@
       </node>
       <node id="Sun" name="Sun" type="NODE">
         <matrix sid="transform">1 0 0 -5.582471 0 1 0 -7.846725 0 0 1 -7.933399 0 0 0 1</matrix>
-        <instance_light url="#Sun-light"/>
       </node>
     </visual_scene>
   </library_visual_scenes>

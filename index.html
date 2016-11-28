@@ -15,240 +15,226 @@
 ASEETS
 ...................-->
     <a-assets>
+    	<!--galleries-->
     	<a-asset-item id="galleries" src="../models/galleries6.dae"></a-asset-item>
-    	<a-asset-item id="minersLettuce" src="../models/minersLettuce1.dae"></a-asset-item>
-    	<video id="steriographi-video" autoplay loop="true" src="../videos/steriographi-interactive.mp4">
-    	<img id="edit-schedule-sketch" src="../img/edit-schedule-days-up-front.jpg">
-    	<img id="schedule-sketch" src="../img/watering-schedule.jpg">
-    	<img id="manual-watering" src="../img/manual-watering.png">
-    	<img id="watering-schedule" src="../img/watering-schedule.png">
-
+    	<!--textures-->
     	<img id="turqnoise" src="../img/turqnoise.png">
+    	<!--art-->
+    	<img id="art-1" src="../img/art/2007knit-vhs.png">
+    	<img id="art-2" src="../img/art/2007plant-pants.png">
+    	<img id="art-3" src="../img/art/2007reading-glasses.png">
+    	<img id="art-4" src="../img/art/2008automannequin.png">
+    	<img id="art-5" src="../img/art/2008bag-hands.png">
+    	<img id="art-6" src="../img/art/2008people-and-spider.png">
+    	<img id="art-7" src="../img/art/2008techno-idol.png">
+    	<img id="art-8" src="../img/art/2009Laurel-portrait-hair-lace.png">
+    	<img id="art-9" src="../img/art/2012tornado-hair-lace.png">
+    	<img id="art-10" src="../img/art/2012turbines-hair-lace.png">
+    	<img id="art-11" src="../img/art/2012turtle-hair-lace.png">
+    	<!--UI designs-->
+    	<video id="steriographi-video" autoplay loop="true" src="../videos/steriographi-interactive.mp4">
+    	<img id="UI-1" src="../img/UI/1watering-schedule.jpg">
+    	<img id="UI-2" src="../img/UI/2edit-schedule-days-up-front.jpg">
+    	<img id="UI-3" src="../img/UI/3manual-watering.png">
+    	<img id="UI-4" src="../img/UI/4watering-schedule.png">
+    	<!--3D models-->
+    	<a-asset-item id="model-1" src="../models/minersLettuce1.dae"></a-asset-item>
+    	<a-asset-item id="model-2" src="../models/glow-globe-tree.dae"></a-asset-item>
+    	<a-asset-item id="model-3" src="../models/officeIslands2.dae"></a-asset-item>
+    	<a-asset-item id="model-4" src="../models/giant-sequioa.dae"></a-asset-item>
+    	<a-asset-item id="model-5" src="../models/floating-island2.dae"></a-asset-item>
+    	<a-asset-item id="model-6" src="../models/eyeless-islands.dae"></a-asset-item>
+    	<a-asset-item id="model-6a" src="../models/righteye.dae"></a-asset-item>
+    	<a-asset-item id="model-6b" src="../models/lefteye.dae"></a-asset-item>
     </a-assets>
 
-    <a-sky color="#AAA"></a-sky>
+<!--SKY & CAMERA-->    
+  	<a-sky color="#425D70"></a-sky>
 
-    <a-entity id="camera-mover" position="0 0 -1">
+    <a-entity id="camera-mover" position="0 0 -2">
     <a-camera></a-camera>
     </a-entity>
-
-<!--.............
-LIGHTS
-..............-->
-
-<a-light id="dome-light" type="point" intensity="0.5" position="0 3 -5"></a-light>
-<a-light id="gallery-light" type="point" intensity="0.5" position="0 3 -14"></a-light>
-<a-light id="atrium-light" type="point" intensity="0.5" position="0 3s -50">
+<!--LIGHTS-->
+<a-light id="dome-light" type="point" intensity="0.5" position="0 0 -4"></a-light>
+<a-light id="atrium-light" type="point" intensity="0.5" position="0 3 -50">
 </a-light>
-
-<!--GALLERIES MODEL-->
-     <a-collada-model id="gallery-mesh" src="#galleries" scale="2 2 2" position="0 0 0"></a-collada-model>
-
 <!--WATER-->
-	<a-plane color="#20A3CF" height="100" width="100" rotation="-90 0 0" position="0 -0.6 0"></a-plane>
-
+<a-plane color="#20A3CF" height="100" width="100" rotation="-90 0 0" position="0 -0.6 0"></a-plane>
+<!--GALLERIES MODEL-->
+<a-collada-model src="#galleries" scale="2 2 2" position="0 0 0" rotation="0 0 0"></a-collada-model>
 <!--...................................
-ART
+IMAGES OF ART PIECES
 ...................................-->
-<a-entity bmfont-text="text: I began by creating ideas with physical media; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5" rotation="-90 0 0"></a-entity>
-
+<a-entity bmfont-text="text: I began by exploring ideas with physical media; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5" rotation="-90 0 0"></a-entity>
 <!--image of art piece 1-->
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 -30 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 -30 0">
+	<a-image src="#art-1" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: Soft VHS Plants vacuformed plastic, VHS tape  2007; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 <!--image of art piece 2-->
 </a-entity>
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 -60 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
-	   </a-entity>
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 -60 0">
+	<a-image src="#art-2" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: Plant Pants fabric, soil, living plant 2007; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 <!--image of art piece 3-->
 </a-entity>
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 -90 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
-	   </a-entity>
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 -90 0">
+	<a-image src="#art-3" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: Reading Glasses paper, glue 2007; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 <!--image of art piece 4-->
 </a-entity>
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 -120 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
-	   </a-entity>
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 -120 0">
+	<a-image src="#art-4" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: Automannequin mixed media 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 <!--image of art piece 5-->
 </a-entity>
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 -150 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
-	   </a-entity>
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 -150 0">
+	<a-image src="#art-5" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: Bag Hands paper, thread 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 <!--image of art piece 6-->
 </a-entity>
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 180 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
-	   </a-entity>
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 180 0">
+	<a-image src="#art-6" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: People and Spider mixed media 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 <!--image of art piece 7-->
 </a-entity>
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 150 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
-	   </a-entity>
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 150 0">
+	<a-image src="#art-7" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: Techno Idol plastic, glass, living plants 2008; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 <!--image of art piece 8-->
 </a-entity>
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 120 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
-	   </a-entity>
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 120 0">
+	<a-image src="#art-8" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: Portrait of Laurel human hair, 2009; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 <!--image of art piece 9-->
 </a-entity>
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 90 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
-	   </a-entity>
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 90 0">
+	<a-image src="#art-9" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: Reap the Wirlwind human hair, 2012; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 <!--image of art piece 10-->
 </a-entity>
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 60 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
-	   </a-entity>
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 60 0">
+	<a-image src="#art-10" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: Wind Turbines human hair, 2012; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 <!--image of art piece 11-->
 </a-entity>
-<a-entity class="rotate-art" position="0 0 -3" rotation="0 30 0">
-	<a-image src="#turqnoise" width="1" height="1" position="0 2 -3"></a-video>
-	<a-entity bmfont-text="text: Art!; align: center; color: #ffffff; width: 320;" position="-0.4 1 -3" scale="0.5 0.5 0.5">
-	   </a-entity>
+<a-entity class="rotate-art" position="0 0 -3.5" rotation="0 30 0">
+	<a-image src="#art-11" width="1" height="1" position="0 1.5 -4"></a-image>
+	<a-entity bmfont-text="text: Turtle With Power Plants human hair, 2012; align: center; color: #ffffff; width: 320;" position="-0.4 0.6 -4" scale="0.5 0.5 0.5"></a-entity>
 </a-entity>
-
 
 <!--...................................
 2D UI Designs
 ...................................-->
 
 <a-entity bmfont-text="text: Time to think beyond these ideas of scale and context.; align: center; color: #ffffff; width: 320;" position="-0.4 1 -16" scale="0.5 0.5 0.5" rotation="-80 0 0"></a-entity>
-
+<!--Steriographi video right-->
 <a-entity class="rotate-exhibit" position="0 0 -15" rotation="0 -60 0">
-	<a-video src="#steriographi-video" width="1" height="2" position="0 2 -3"></a-video>
+	<a-video src="#steriographi-video" width="1.2" height="2" position="0 2 -3"></a-video>
 	 <a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
 	    </a-entity>
 </a-entity>
-
+<!--Steriographi video left-->
 <a-entity class="rotate-exhibit" position="0 0 -15" rotation="0 60 0">
-	<a-video src="#steriographi-video" width="1" height="2" position="0 2 -3"></a-video>
+	<a-video src="#steriographi-video" width="1.2" height="2" position="0 2 -3"></a-video>
 	<a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
 	    </a-entity>
 </a-entity>
-
-<!--.........................-->
-
+<!--UI for Edyn: -->
 <a-entity class="rotate-exhibit" position="0 0 -13" rotation="0 90 0">
-	<a-image src="#manual-watering" width="1" height="2" position="0 2 -3"></a-image>
+	<a-image src="#UI-1" width="1" height="2" position="0 2 -3"></a-image>
 	<a-entity bmfont-text="text: text; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
-	    </a-entity>
+	</a-entity>	    
 </a-entity>
+<!--UI for Edyn: -->
 <a-entity class="rotate-exhibit" position="0 0 -11" rotation="0 90 0">
-	<a-image src="#manual-watering" width="1" height="2" position="0 2 -3"></a-image>
+	<a-image src="#UI-2" width="1" height="2" position="0 2 -3"></a-image>
 	<a-entity bmfont-text="text: text; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
-	    </a-entity>
+	</a-entity>
 </a-entity>
-
+<!--UI for Edyn: -->
 <a-entity class="rotate-exhibit" position="0 0 -13" rotation="0 -90 0">
-	<a-image src="#edit-schedule-sketch" width="1" height="2" position="0 2 -3"></a-image>
+	<a-image src="#UI-3" width="1" height="2" position="0 2 -3"></a-image>
 	<a-entity bmfont-text="text: text; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
-	    </a-entity>
+	</a-entity>	    
 </a-entity>
+<!--UI for Edyn: -->
 <a-entity class="rotate-exhibit" position="0 0 -11" rotation="0 -90 0">
-	<a-image src="#schedule-sketch" width="1" height="2" position="0 2 -3"></a-image>
+	<a-image src="#UI-4" width="1" height="2" position="0 2 -3"></a-image>
 	<a-entity bmfont-text="text: text; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
 	    </a-entity>
 </a-entity>
-
 
 <!--...................................
 MODELS on PEDESTALS
 ...................................-->
-
-<!--MODEL-->
+<!--MODEL 1-->
 <a-entity class="left-pedestal" position="-2 0 -24">		
 	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
-    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+    	<a-collada-model src="#model-1" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
 	</a-entity>
 </a-entity>
-
-<!--MODEL-->
+<!--MODEL 2-->
 <a-entity class="right-pedestal" position="2 0 -26">		
-	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
+	    <a-entity bmfont-text="text: Globe Trees Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-90 -90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
-    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+    	<a-collada-model src="#model-2" scale="0.02 0.02 0.02" position="0 1.05 0"></a-collada-model>
 	</a-entity>
 </a-entity>
-
-<!--MODEL-->
+<!--MODEL 3-->
 <a-entity class="left-pedestal" position="-2 0 -28">		
-	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
+	    <a-entity bmfont-text="text: Office Islands Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
-    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+    	<a-collada-model src="#model-3" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
 	</a-entity>
 </a-entity>
-
-<!--MODEL-->
+<!--MODEL 4-->
 <a-entity class="right-pedestal" position="2 0 -30">		
-	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
+	    <a-entity bmfont-text="text: Giant Sequoia Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
-    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+    	<a-collada-model src="#model-4" scale="0.1 0.1 0.1" position="-0.5 1 0"></a-collada-model>
 	</a-entity>
 </a-entity>
-
-<!--MODEL-->
+<!--MODEL 5-->
 <a-entity class="left-pedestal" position="-2 0 -32">		
-	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
+	    <a-entity bmfont-text="text: Floating Island Collada Model; align: center; color: #ffffff; width: 320;" position="0.7 0.5 0.4" rotation="-25 90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
-    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+    	<a-collada-model src="#model-5" scale="0.03 0.03 0.03" position="0 1.06 0"></a-collada-model>
 	</a-entity>
 </a-entity>
-
-<!--MODEL-->
+<!--MODEL 6 -->
 <a-entity class="right-pedestal" position="2 0 -34">		
-	    <a-entity bmfont-text="text: Miner's Lettuce Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
+	    <a-entity bmfont-text="text: Watchful Islands Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
-		<a-light type="spot" intensity="2" position="0 2 0" rotation="-90 -90 0" distance="5" penumbra="0.9"></a-light>
+
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
-    	<a-collada-model id="minersLettuce" src="#minersLettuce" scale="0.07 0.07 0.07" position="0 1 0"></a-collada-model>
+    	<a-collada-model src="#model-6" scale="0.08 0.08 0.08" position="0 1.3 0"></a-collada-model>
 	</a-entity>
 </a-entity>
 
