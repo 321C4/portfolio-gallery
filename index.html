@@ -26,7 +26,6 @@
    </head>
   <body>
     <a-scene>
-
 <!--..................
 ASSETS
 ...................-->
@@ -75,9 +74,9 @@ ASSETS
 <!--SKY & CAMERA-->    
   	<a-sky color="#425D70"></a-sky>
 
-    <a-entity position="0 0 0">
+    <a-entity position="0 0 -35" rotation="0 0 0">
         <a-camera id="camera" look-controls wasd-controls>
-          <a-ring class="reticle-cursor" opacity="0" color="#E812CE"  radius-outer="0.01" radius-inner="0.008" position="0 0 -1" cursor raycaster="far: 20; interval: 1000">
+          <a-ring cursor="fuse:false" raycaster="objects: .collidable; far: 4.5; near: 1; interval: 1000" class="reticle-cursor" opacity="0" color="#E812CE"  radius-outer="0.01" radius-inner="0.008" position="0 0 -1">
           </a-ring>
         </a-camera>
     </a-entity>
@@ -92,7 +91,10 @@ ASSETS
 <a-plane color="#20A3CF" height="100" width="100" rotation="-90 0 0" position="0 -0.6 0"></a-plane>
 <!--GALLERIES MODEL-->
 <a-collada-model src="#galleries" scale="2 2 2" position="0 0 0" rotation="0 0 0"></a-collada-model>
-<!--...................................
+
+<a-torus class="raycast-blocker" color="#0092FF" opacity="0" scale="4 2 4" rotation="90 0 0" position="0 1 -53"></a-torus>
+
+<!--..................................
 IMAGES OF ART PIECES
 ...................................-->
 <a-entity bmfont-text="text: I began by exploring ideas with physical media; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5" rotation="-90 0 0"></a-entity>
@@ -287,55 +289,55 @@ VR STUFF!!! videos, GIs, and portals to webVR scenes
 <a-entity bmfont-text="text: My journey into VR is just beginning.; align: center; color: #ffffff; width: 320;" position="-0.4 0.4 -44" scale="0.5 0.5 0.5" rotation="-60 0 0"></a-entity>
 
 <!--0 GLOBETREES-->
-<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 0 0">
+<a-entity class="collidable" position="0 0 -53" rotation="0 0 0">
 	<a-entity bmfont-text="text: Carnival Globe Trees, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
 	<a-box href="si-pages/carnivalglobetrees.html" material="src: #carnival-globe-trees" depth="0.2" height="2" width="2" position="0 1 -6"></a-box>
 </a-entity>
 
 <!--36 DEMO 1 VIDEO-->
-<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 36 0">
+<a-entity class="collidable" position="0 0 -53" rotation="0 36 0">
 	<a-entity bmfont-text="text: SkyIslandsVR, Demo 1 video capture, GearVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
 	<a-box href="https://www.youtube.com/watch?v=tHUxIb2fLFg" depth="0.2" height="2" width="2" material="src: #skyislands-demo-1" position="0 1 -6"></a-box>
 </a-entity>
 
 <!--72 SAD ISLAND-->
-<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 72 0">
+<a-entity class="collidable" position="0 0 -53" rotation="0 72 0">
 	<a-entity bmfont-text="text: Sad Island, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
 	<a-box href="si-pages/SadIsland.html" depth="0.2" height="2" width="2" material="src: #sad-island" position="0 1 -6"></a-box>
 </a-entity>
 
 <!--108 OVER WATER-->
-<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 108 0">
+<a-entity class="collidable" position="0 0 -53" rotation="0 108 0">
 	<a-entity bmfont-text="text: Over Water, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
 	<a-box href="si-pages/overwater.html" depth="0.2" height="2" width="2" material="src: #over-water" position="0 1 -6"></a-box>
 </a-entity>
 
 <!--144 DARK LOTUS-->
-<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 144 0">
+<a-entity class="collidable" position="0 0 -53" rotation="0 144 0">
 	<a-entity bmfont-text="text: Dark Lotus, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
 	<a-box href="si-pages/darklotus.html" depth="0.2" height="2" width="2" material="src: #dark-lotus" position="0 1 -6"></a-box>
 </a-entity>
 
 <!-- -144 MOSS MARCH-->
-<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -144 0">
+<a-entity class="collidable" position="0 0 -53" rotation="0 -144 0">
 	<a-entity bmfont-text="text: Moss March, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
 	<a-box href="si-pages/mossmarch.html" depth="0.2" height="2" width="2" material="src: #moss-march" position="0 1 -6"></a-box>
 </a-entity>
 
 <!-- -108 SPACE BLOB TOWERS-->
-<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -108 0">
+<a-entity class="collidable" position="0 0 -53" rotation="0 -108 0">
 	<a-entity bmfont-text="text: Space Blob Towers, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
 	<a-box href="si-pages/spaceblobtowers.html" depth="0.2" height="2" width="2" material="src: #space-blob-towers" position="0 1 -6"></a-box>
 </a-entity>
 
 <!-- -72 REDWOOD DUSK-->
-<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -72 0">
+<a-entity class="collidable" position="0 0 -53" rotation="0 -72 0">
 	<a-entity bmfont-text="text: Redwood Dusk, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
 	<a-box href="si-pages/redwooddusk.html" depth="0.2" height="2" width="2" material="src: #redwood-dusk" position="0 1 -6"></a-box>
 </a-entity>
 
 <!-- -36 DEMO 2 VIDEO-->
-<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -36 0">
+<a-entity class="collidable" position="0 0 -53" rotation="0 -36 0">
 	<a-entity bmfont-text="text: SkyIslandsVR, Oculus Launchpad Demo: video capture, GearVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
 	<a-box href="https://www.youtube.com/watch?v=wuraOYPHank" depth="0.2" height="2" width="2" material="src: #skyIslands-launchpad-demo" position="0 1 -6"></a-box>
 </a-entity>
