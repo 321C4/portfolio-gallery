@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redwood Dusk</title>
+    <link rel="icon" sizes="192x192" href="../img/si-icon.png">
+    <script src="../js/aframe.dev.js"></script>
+  </head>
+  <body>
+
+ <a-scene fog="type: exponential; density: 0.08; color: #0F4033; far: 9; near: 0">
+
+<a-entity rotation="0 150 0">
+ <a-entity camera position="2.4 1 9" wasd-controls="acceleration: 50" look-controls></a-entity>
+ </a-entity>
+
+ <a-sky color="#265451"></a-sky>
+
+ <a-collada-model src="../si-models/Sequioa_Scene4.dae" scale="3 3 3" position="0 0 0" sound="src: ../si-sounds/lettucewinds1.mp3; autoplay: true; loop: true; volume: 0.02"></a-collada-model>
+
+<!-- moon -->
+ <a-entity light="type: point; color: #FFE488; intensity: 4" position="3 25 13"></a-entity>
+
+<a-sphere position="3 25 13" color="#415CE8" scale="12 12 12"></a-sphere>
+
+  </a-scene>
+  </body>
+</html>

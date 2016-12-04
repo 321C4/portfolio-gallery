@@ -26,6 +26,7 @@
         this.el.addEventListener('click', this.handler);
         this.el.addEventListener('gripdown', this.handler);
         this.setupHighlight();
+        this.setupReticle();
       },
 
       /**
@@ -44,15 +45,17 @@
 
       setupHighlight: function () {
         // Clone mesh and set up highlighter material.
+        // Toggle visibility of reticle (requires cursor in scene)
         var mesh = this.el.object3DMap.mesh;
         if (!mesh) {
           return false;
         }
         var clone = mesh.clone();
+        var reticle = document.querySelector(".reticle-cursor")
         clone.material = new THREE.MeshBasicMaterial({
-            color: 0x00D6FF,
+            color: 0xFFFFFF,
             transparent: true,
-            opacity: 0.3
+            opacity: 0.1
         });
         clone.scale.set(1.2, 1.2, 1.2);
         clone.visible = false;
@@ -61,10 +64,29 @@
         // Toggle highlighter on mouse events.
         this.el.addEventListener('mouseenter', function () {
           clone.visible = true;
+          reticle.opacity = 1;
         });
 
         this.el.addEventListener('mouseleave', function () {
           clone.visible = false;
+          reticle.opacity = 0;
+        });
+      },
+
+      setupReticle: function () {
+        var mesh = this.el.object3DMap.mesh;
+        if (!mesh) {
+          return false;
+        }
+        var reticle = document.getElementsByClassName("reticle-cursor")
+        reticle.opacity = 0;
+            // Interaction with hyperlink object toggles visibility of reticle
+        this.el.addEventListener('mouseenter', function () {
+          reticle.opacity = 1;
+        });
+
+        this.el.addEventListener('mouseleave', function () {
+          reticle.opacity = 0;
         });
       }
     });

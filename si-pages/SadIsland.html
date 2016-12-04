@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sad Island</title>
+    <link rel="icon" sizes="192x192" href="../img/si-icon.png">
+    <script src="../js/aframe.dev.js"></script>
+  </head>
+  <body>
+
+  <a-scene fog="type: exponential; density: 0.08; color: #FAEC78; far: 10; near: 0">
+    <a-assets>
+      <a-asset-item id="islands" src="../si-models/eyelessislands.dae"></a-asset-item>
+      <a-asset-item id="eyeball" src="../si-models/eyeball.dae"></a-asset-item>
+
+      <a-mixin id="largescale" scale="3 3 3"></a-mixin>     
+    </a-assets>
+
+    <a-entity camera position="-5 1 8" wasd-controls="acceleration: 50" look-controls></a-entity>
+
+ <a-sky color="#000"></a-sky>
+
+<!-- lights -->
+<a-entity light="type: point; intensity: 1; color: #165EDB"
+          position="-4 -10 0"></a-entity>
+<a-entity light="type: point; intensity: 3; color: #FFFAAB"
+          position="0 10 3"></a-entity>
+
+<!-- ground plane -->
+
+<a-entity rotation="90 0 0" position="0 0 0" scale="70 70" geometry="primitive: plane" material="color: #00D7FF; side: double; opacity: 0.5"></a-entity>
+
+<!-- models -->
+
+  <a-collada-model src="#islands" mixin="largescale" sound="src: ../si-sounds/placeholder.ogg; autoplay: true; loop: true; volume: 0.02" position="0 0 0">
+</a-collada-model>
+
+  <a-collada-model src="#eyeball" mixin="largescale" look-at="[camera]" position="-1.3 0.8 2">
+</a-collada-model>
+  <a-collada-model src="#eyeball" mixin="largescale" look-at="[camera]" position="1.3 0.8 2">
+</a-collada-model>
+
+
+
+  </a-scene>
+
+  </body>
+</html>

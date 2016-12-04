@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Meditation Orbs</title>
+    <link rel="icon" sizes="192x192" href="../img/si-icon.png">
+    <script src="../js/aframe.min.js"></script>
+    <script src="../js/aframe-bmfont-text-component.min.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  </head>
+  <body>
+
+  <a-scene fog="type: exponential; density: .2; color: #125C99; far: 10; near: 0">
+    <a-assets>
+      <a-asset-item id="meditationplatform" src="../si-models/meditationplatform.dae"></a-asset-item>
+      <a-asset-item id="meditcrystals" src="../si-models/meditcrystals.dae"></a-asset-item>  
+    </a-assets>
+
+    <a-entity camera position="0 1.8 0" wasd-controls="acceleration: 50" look-controls></a-entity>
+
+ <a-sky color="#000"></a-sky>
+
+<!-- lights -->
+<a-entity light="type: point; intensity: 1; color: #27C9FE"
+          position="0 10 0"></a-entity>
+<a-entity light="type: point; intensity: 1; color: #FFF5B8"
+          position="0 0 0"></a-entity>
+
+<!-- ground plane -->
+
+<a-entity rotation="90 0 0" position="0 -0.5 0" scale="50 50" geometry="primitive: plane" material="color: #82FEDB; side: double; opacity: 0.5"></a-entity>
+
+<!-- models -->
+
+  <a-collada-model src="#meditationplatform" scale="1 1 1" position="0 -2 0">
+</a-collada-model>
+
+  <a-collada-model src="#meditcrystals" scale="0.5 0.5 0.5" position="0 0 0">
+</a-collada-model>
+
+<a-video src="#penguin-sledding" width="3.2" height="1.8" position="0 2 -3"></a-video>
+
+<a-entity bmfont-text="text: SkyIslandsVR, Oculus Launchpad Demo: video capture, GearVR 2016. Audio recorded separately from phone during play, and spliced back into video.; align: center; color: #ffffff; width: 640;" position="-1.6 0 -3" rotation="0 0 0" scale="1 1 1"></a-entity>
+
+  </a-scene>
+
+  </body>
+</html>

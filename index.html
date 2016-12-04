@@ -8,19 +8,20 @@
       a-scene:not([data-is-loaded="true"]) { opacity: 0; pointer-events: none; transition: none; visibility: visible; }
       a-scene[data-is-loaded="true"] { opacity: 1; pointer-events: auto; visibility: visible; }
     </style>
+<!-- link traversal stuff, with thanks to cvan and  -->
     <script src="sw-load.js" data-service-worker="sw.js" data-service-worker-scope="./"></script>
-    <link rel="prefetch" href="http://www.skyislandsvr.com/pages/overwater.html">
-    <link rel="prefetch" href="http://www.skyislandsvr.com/pages/darklotus.html">
-    <link rel="prefetch" href="http://www.skyislandsvr.com/pages/SadIsland.html">
-    <link rel="prefetch" href="http://www.skyislandsvr.com/pages/mossmarch.html">
-    <link rel="prefetch" href="http://www.skyislandsvr.com/pages/carnivalglobetrees.html">
-    <link rel="prefetch" href="http://www.skyislandsvr.com/pages/spaceblobtowers.html">
-    <link rel="prefetch" href="http://www.skyislandsvr.com/pages/redwooddusk.html">    
+    <link rel="prefetch" href="/si-pages/overwater.html">
+    <link rel="prefetch" href="/si-pages/darklotus.html">
+    <link rel="prefetch" href="/si-pages/SadIsland.html">
+    <link rel="prefetch" href="/si-pages/mossmarch.html">
+    <link rel="prefetch" href="/si-pages/carnivalglobetrees.html">
+    <link rel="prefetch" href="/si-pages/spaceblobtowers.html">
+    <link rel="prefetch" href="/si-pages/redwooddusk.html">    
      <title>EJL Portfolio</title>
     <script src="../js/aframe.min.js"></script>
     <script src="../js/aframe-bmfont-text-component.min.js"></script>
     <script src="../js/aframe-hyperlink.js"></script>
-    <link rel="icon" sizes="192x192" href="../img/art/2007knit-vhs.png">
+    <link rel="icon" sizes="192x192" href="../img/si-icon.png">
    </head>
   <body>
     <a-scene>
@@ -31,8 +32,6 @@ ASSETS
     <a-assets>
     	<!--galleries-->
     	<a-asset-item id="galleries" src="../models/galleries6.dae"></a-asset-item>
-    	<!--textures-->
-    	<img id="turqnoise" src="../img/turqnoise.png">
     	<!--art-->
     	<img id="art-1" src="../img/art/2007knit-vhs.png">
     	<img id="art-2" src="../img/art/2007plant-pants.png">
@@ -46,7 +45,7 @@ ASSETS
     	<img id="art-10" src="../img/art/2012turbines-hair-lace.png">
     	<img id="art-11" src="../img/art/2012turtle-hair-lace.png">
     	<!--UI designs-->
-    	<video id="steriographi-video" autoplay loop="true" src="../videos/steriographi-interactive.mp4">
+    	<video id="steriographi-video" autoplay loop="true" src="../videos/steriographi.mp4">
     	<img id="UI-1" src="../img/UI/1watering-schedule.jpg">
     	<img id="UI-2" src="../img/UI/2edit-schedule-days-up-front.jpg">
     	<img id="UI-3" src="../img/UI/3manual-watering.png">
@@ -60,29 +59,31 @@ ASSETS
     	<a-asset-item id="model-6" src="../models/eyeless-islands.dae"></a-asset-item>
     	<a-asset-item id="model-6a" src="../models/righteye.dae"></a-asset-item>
     	<a-asset-item id="model-6b" src="../models/lefteye.dae"></a-asset-item>
+    	<!-- WebVR site preview images -->
+    	<img id="carnival-globe-trees" src="../img/webvr/carnival-globe-trees.png">
+    	<img id="dark-lotus" src="../img/webvr/dark-lotus.png">
+    	<img id="moss-march" src="../img/webvr/moss-march.png">
+    	<img id="over-water" src="../img/webvr/over-water.png">
+    	<img id="redwood-dusk" src="../img/webvr/redwood-dusk.png">
+    	<img id="sad-island" src="../img/webvr/sad-island.png">
+    	<img id="skyislands-demo-1" src="../img/webvr/skyislands-demo-1.png">
+    	<img id="skyIslands-launchpad-demo" src="../img/webvr/skyIslands-launchpad-demo.png">
+    	<img id="space-blob-towers" src="../img/webvr/space-blob-towers.png">
     </a-assets>
 
 <!--SKY & CAMERA-->    
   	<a-sky color="#425D70"></a-sky>
 
-    <a-entity position="0 0 -54">
+    <a-entity position="0 0 0">
         <a-camera id="camera" look-controls wasd-controls>
-          <!-- <a-cursor color="#4CC3D9"></a-cursor> -->
-          <a-ring radius-outer="0.01" radius-inner="0.008"
-            position="0 0 -1"
-            material="color: #4045FF; shader: flat"
-            cursor="maxDistance: 5; fuse: false;">
-            <a-animation begin="click" easing="ease-in" attribute="scale"
-              fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
-            <a-animation begin="fusing" easing="ease-in" attribute="scale"
-              fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+          <a-ring class="reticle-cursor" opacity="0" color="#E812CE"  radius-outer="0.01" radius-inner="0.008" position="0 0 -1" cursor raycaster="far: 20; interval: 1000">
           </a-ring>
         </a-camera>
     </a-entity>
 <!--LIGHTS-->
 <a-entity light="type: point; intensity: 1.5; distance: 35; decay: 2" position="0 15 -3"></a-entity>
 <a-entity light="type: point; intensity: 0.75; distance: 15; decay: 2" position="0 0 -14"></a-entity>
-<a-entity light="type: point; intensity: 4; distance: 20; decay: 2" color="#E89352" position="0 5 -32"></a-entity>
+<a-entity light="type: point; intensity: 4; distance: 20; decay: 2" color="#E89352" position="0 7 -31"></a-entity>
 <a-entity light="type: point; intensity: 2; distance: 15; decay: 2" position="0 5 -54"></a-entity>
 <!--<a-entity light="type: ambient; color: #CCC; intensity: 0.1"></a-entity>-->
 
@@ -165,6 +166,31 @@ IMAGES OF ART PIECES
 ...................................-->
 <a-entity bmfont-text="text: Just as I began learning about 2D UI design..; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -11" scale="0.5 0.5 0.5" rotation="-90 0 0"></a-entity>
 <a-entity bmfont-text="text: It became necessary to think beyond these ideas of scale and context; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -16" scale="0.5 0.5 0.5" rotation="-80 0 0"></a-entity>
+<!--UI for Edyn 1: -->
+<a-entity class="rotate-exhibit" position="0 0 -13" rotation="0 90 0">
+	<a-image src="#UI-1" width="1" height="2" position="0 2 -3"></a-image>
+	<a-entity bmfont-text="text: UI sketch for Edyn: Watering Schedule; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	</a-entity>	    
+</a-entity>
+<!--UI for Edyn 2: -->
+<a-entity class="rotate-exhibit" position="0 0 -11" rotation="0 90 0">
+	<a-image src="#UI-2" width="1" height="2" position="0 2 -3"></a-image>
+	<a-entity bmfont-text="text: UI sketch for Edyn: Watering Schedule; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	</a-entity>
+</a-entity>
+<!--UI for Edyn 3: -->
+<a-entity class="rotate-exhibit" position="0 0 -13" rotation="0 -90 0">
+	<a-image src="#UI-3" width="1" height="2" position="0 2 -3"></a-image>
+	<a-entity bmfont-text="text: UI design for Edyn app, 2015; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	</a-entity>	    
+</a-entity>
+<!--UI for Edyn 4: -->
+<a-entity class="rotate-exhibit" position="0 0 -11" rotation="0 -90 0">
+	<a-image src="#UI-4" width="1" height="2" position="0 2 -3"></a-image>
+	<a-entity bmfont-text="text: UI design for Edyn app, 2015; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
+	    </a-entity>
+</a-entity>
+
 <!--Steriographi video right-->
 <a-entity class="rotate-exhibit" position="0 0 -15" rotation="0 -60 0">
 	<a-video src="#steriographi-video" width="1.2" height="2" position="0 2 -3"></a-video>
@@ -175,30 +201,6 @@ IMAGES OF ART PIECES
 <a-entity class="rotate-exhibit" position="0 0 -15" rotation="0 60 0">
 	<a-video src="#steriographi-video" width="1.2" height="2" position="0 2 -3"></a-video>
 	<a-entity bmfont-text="text: Steriographi: interactive prototype made with Quartz Composer; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
-	    </a-entity>
-</a-entity>
-<!--UI for Edyn: -->
-<a-entity class="rotate-exhibit" position="0 0 -13" rotation="0 90 0">
-	<a-image src="#UI-1" width="1" height="2" position="0 2 -3"></a-image>
-	<a-entity bmfont-text="text: text; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
-	</a-entity>	    
-</a-entity>
-<!--UI for Edyn: -->
-<a-entity class="rotate-exhibit" position="0 0 -11" rotation="0 90 0">
-	<a-image src="#UI-2" width="1" height="2" position="0 2 -3"></a-image>
-	<a-entity bmfont-text="text: text; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
-	</a-entity>
-</a-entity>
-<!--UI for Edyn: -->
-<a-entity class="rotate-exhibit" position="0 0 -13" rotation="0 -90 0">
-	<a-image src="#UI-3" width="1" height="2" position="0 2 -3"></a-image>
-	<a-entity bmfont-text="text: text; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
-	</a-entity>	    
-</a-entity>
-<!--UI for Edyn: -->
-<a-entity class="rotate-exhibit" position="0 0 -11" rotation="0 -90 0">
-	<a-image src="#UI-4" width="1" height="2" position="0 2 -3"></a-image>
-	<a-entity bmfont-text="text: text; align: center; color: #ffffff; width: 320;" position="-0.4 0.5 -3" scale="0.5 0.5 0.5">
 	    </a-entity>
 </a-entity>
 
@@ -257,53 +259,85 @@ MODELS on PEDESTALS
 </a-entity>
 <!--MODEL 6 -->
 <a-entity class="right-pedestal" position="2 0 -34">		
-	    <a-entity bmfont-text="text: Watchful Islands Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
+	    <a-entity bmfont-text="text: Sad Islands Collada Model; align: center; color: #ffffff; width: 320;" position="-0.7 0.5 -0.4" rotation="-25 -90 0" scale="0.5 0.5 0.5">
 	    </a-entity>
 	<a-entity class="pedestal"> 
 	<a-entity light="type: spot; angle: 180; intensity: 2.5; distance: 5; decay: 2" position="0 3 0"></a-entity>
 		<a-box scale="1 2 1" position="0 0 0"></a-box>
-    	<a-collada-model src="#model-6" scale="0.08 0.08 0.08" position="0 1.3 0"></a-collada-model>
+    	<a-collada-model src="#model-6" scale="0.08 0.08 0.08" position="0 1.3 0">
+    		<a-collada-model src="#model-6a"></a-collada-model>
+    		<a-collada-model src="#model-6b"></a-collada-model>
+    	</a-collada-model>
 	</a-entity>
 </a-entity>
 
 <!--...................................
 VR STUFF!!! videos, GIs, and portals to webVR scenes
 ...................................-->
+<a-octahedron material="shader: flat; color: #ffffff; opacity: 0.3" radius="5" position="0 10 -53">
+	<a-animation attribute="rotation"
+               dur="20000"
+               fill="forwards"
+               to="0 360 0"
+               easing="linear"
+               repeat="indefinite"></a-animation>
+</a-octahedron>
+
 <a-entity bmfont-text="text: My journey into VR is just beginning.; align: center; color: #ffffff; width: 320;" position="-0.4 0.4 -44" scale="0.5 0.5 0.5" rotation="-60 0 0"></a-entity>
 
 <!--0 GLOBETREES-->
 <a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 0 0">
-	<a-entity bmfont-text="text: Carnival Globe Trees WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 3 -6" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
-	<a-box href="http://www.skyislandsvr.com/pages/carnivalglobetrees.html" depth="0.2" height="2" width="1" color="#4F00FF" position="0 1 -6"></a-entity>
+	<a-entity bmfont-text="text: Carnival Globe Trees, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+	<a-box href="../si-pages/carnivalglobetrees.html" material="src: #carnival-globe-trees" depth="0.2" height="2" width="2" position="0 1 -6"></a-box>
 </a-entity>
 
 <!--36 DEMO 1 VIDEO-->
-
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 36 0">
+	<a-entity bmfont-text="text: SkyIslandsVR, Demo 1 video capture, GearVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+	<a-box href="https://www.youtube.com/watch?v=tHUxIb2fLFg" depth="0.2" height="2" width="2" material="src: #skyislands-demo-1" position="0 1 -6"></a-box>
+</a-entity>
 
 <!--72 SAD ISLAND-->
-
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 72 0">
+	<a-entity bmfont-text="text: Sad Island, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+	<a-box href="../si-pages/SadIsland.html" depth="0.2" height="2" width="2" material="src: #sad-island" position="0 1 -6"></a-box>
+</a-entity>
 
 <!--108 OVER WATER-->
-
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 108 0">
+	<a-entity bmfont-text="text: Over Water, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+	<a-box href="../si-pages/overwater.html" depth="0.2" height="2" width="2" material="src: #over-water" position="0 1 -6"></a-box>
+</a-entity>
 
 <!--144 DARK LOTUS-->
-
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 144 0">
+	<a-entity bmfont-text="text: Dark Lotus, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+	<a-box href="../si-pages/darklotus.html" depth="0.2" height="2" width="2" material="src: #dark-lotus" position="0 1 -6"></a-box>
+</a-entity>
 
 <!-- -144 MOSS MARCH-->
-
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -144 0">
+	<a-entity bmfont-text="text: Moss March, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+	<a-box href="../si-pages/mossmarch.html" depth="0.2" height="2" width="2" material="src: #moss-march" position="0 1 -6"></a-box>
+</a-entity>
 
 <!-- -108 SPACE BLOB TOWERS-->
-
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -108 0">
+	<a-entity bmfont-text="text: Space Blob Towers, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+	<a-box href="../si-pages/spaceblobtowers.html" depth="0.2" height="2" width="2" material="src: #space-blob-towers" position="0 1 -6"></a-box>
+</a-entity>
 
 <!-- -72 REDWOOD DUSK-->
-
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -72 0">
+	<a-entity bmfont-text="text: Redwood Dusk, WebVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+	<a-box href="../si-pages/redwooddusk.html" depth="0.2" height="2" width="2" material="src: #redwood-dusk" position="0 1 -6"></a-box>
+</a-entity>
 
 <!-- -36 DEMO 2 VIDEO-->
-
-
-
-
-
+<a-entity class="vr-room-exhibit" position="0 0 -53" rotation="0 -36 0">
+	<a-entity bmfont-text="text: SkyIslandsVR, Oculus Launchpad Demo: video capture, GearVR, 2016; align: center; color: #ffffff; width: 320;" position="-0.4 1.5 -5.8" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+	<a-box href="https://www.youtube.com/watch?v=wuraOYPHank" depth="0.2" height="2" width="2" material="src: #skyIslands-launchpad-demo" position="0 1 -6"></a-box>
+</a-entity>
 
     </a-scene>
   </body>
